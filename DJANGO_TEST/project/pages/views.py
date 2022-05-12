@@ -1,8 +1,18 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
 
-# Create your views here.
+@csrf_exempt
 def	home_page(request, *args, **kwargs):
-	print(request.user)
 	return render(request, "home.html", {})
-	#return HttpResponse("<h1>Welcome</h1>")
+
+@csrf_exempt
+def scan_page(request, *args, **kwargs):
+	if request.method == 'POST':	
+		res = request.body
+		d = json.loads(res)
+		print(d)
+		return render(request, "home.html", {})
+	else:
+		return render(request, "home.html", {})

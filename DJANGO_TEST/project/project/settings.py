@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-(sf42v+lzzxd8-6($ie)s9_g+k(957um_&_gf_bbdvct^^hk*z
 DEBUG = True
 
 ALLOWED_HOSTS = ['shi-r12-p3.s19.be',
-                '10.1.12.3',
+                'shi-r12-p1.s19.be',
+                '10.1.12.1',
                 '127.0.0.1',
                 ]
 
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'badges',
     'ownership',
     'users',
+    'pages',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +64,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Users/lrondia/Documents/SIDE_PROJECTS/DJANGO_TEST/template'],
+        'DIRS': [BASE_DIR / 'template'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
