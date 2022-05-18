@@ -9,7 +9,7 @@ def	home_page(request, *args, **kwargs):
 
 @csrf_exempt
 def scan_page(request, *args, **kwargs):
-	if request.method == 'POST':	
+	if request.method == 'POST':
 		res = request.body
 		d = json.loads(res)
 		print(d)
