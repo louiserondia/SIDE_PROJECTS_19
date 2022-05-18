@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>EVENTS</h1>
+<h2>Scan here to add a new participant</h2>
+<table style="border:solid; ">
+	<tr>
+		<th>Name</th>
+		<th>Drinks</th>
+		<th>Date</th>
+	</tr>
+	{% for event in events %}
+	<tr>
+		<td><a href="../drinks/">{{ event.name }}</a></td>
+		<td>{{ event.drinks }}</td>
+		<td>{{ event.date }}</td>
+	</tr>
+	{% endfor %}
+</table>
+<p><a href="../add_user/">ADD USER</a></p>
+{% endblock %}

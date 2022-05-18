@@ -1,14 +1,9 @@
-<h1>Welcome</h1>
-<p>yoo</p>
-<table style="border:solid; ">
-<tr>
-	<th>UID</th>
-	<th>Date</th>
-</tr>
-{% for scan in scans %}
-<tr>
-	<td>{{ scan.uid }}</td>
-	<td>{{ scan.date }}</td>
-</tr>
-{% endfor %}
-</table>
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>HOME PAGE</h1>
+<h2><a href="events/">EVENTS</a></h2>
+<h2><a href="drinks/">DRINKS</a></h2>
+<h2><a href="add_user/">USER INFOS</a></h2>
+	{% include 'scan.html' %}
+{% endblock %}

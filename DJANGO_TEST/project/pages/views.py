@@ -1,21 +1,46 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import Scan
+from .models import Scan, Event
 import json
 
 @csrf_exempt
 def	home_page(request, *args, **kwargs):
-	return render(request, "home.html", {})
+	context = {
+		'scans': Scan.objects.all()
+	}
+	return render(request, "home.html", context)
+
+@csrf_exempt
+def events_page(request, *args, **kwargs):
+	if request.method == 'POST':
+		res = request.body
+		d = json.loads(res)
+		participant = Participant(participant = d['id'])
+		participant.save()
+
+	context = {
+		'scans': Scan.objects.all(),
+		'events': Event.objects.all(),
+	}
+	return render(request, "events.html", context)
+
+def drinks_page(request, *args, **kwargs):
+	context = {
+		'scans': Scan.objects.all()
+	}
+	return render(request, "drinks.html", context)
+
+def add_user_page(request, *args, **kwargs):
+	context = {
+		'scans': Scan.objects.all()
+	}
+	return render(request, "add_user.html", context)
 
 @csrf_exempt
 def scan_page(request, *args, **kwargs):
-<<<<<<< HEAD
 	#Scan.objects.all().delete()
-	if request.method == 'POST':	
-=======
 	if request.method == 'POST':
->>>>>>> cd055f38399fdf90beab5f7ac103766689b467b7
 		res = request.body
 		d = json.loads(res)
 		scan = Scan(uid = d['id'])
@@ -24,4 +49,4 @@ def scan_page(request, *args, **kwargs):
 	context = {
 		'scans': Scan.objects.all()
 	}
-	return render(request, "home.html", context)
+	return render(request, "scan.html", context)
