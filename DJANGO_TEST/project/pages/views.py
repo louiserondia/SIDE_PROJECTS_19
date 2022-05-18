@@ -10,8 +10,12 @@ def	home_page(request, *args, **kwargs):
 
 @csrf_exempt
 def scan_page(request, *args, **kwargs):
+<<<<<<< HEAD
 	#Scan.objects.all().delete()
 	if request.method == 'POST':	
+=======
+	if request.method == 'POST':
+>>>>>>> cd055f38399fdf90beab5f7ac103766689b467b7
 		res = request.body
 		d = json.loads(res)
 		scan = Scan(uid = d['id'])

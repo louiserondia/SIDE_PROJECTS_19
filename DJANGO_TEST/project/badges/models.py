@@ -4,5 +4,4 @@ from django.db import models
 class Badge(models.Model):
 	UID = models.CharField(max_length = 12)
 	Ref = models.CharField(max_length = 4)
-
 	
