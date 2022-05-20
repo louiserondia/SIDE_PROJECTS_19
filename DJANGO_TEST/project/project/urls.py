@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from pages.views import home_page, scan_page, events_page, drinks_page, add_user_page
+from pages.views import home_page, scan_page, events_page, drinks_page, add_user_page, one_event
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +26,6 @@ urlpatterns = [
     path('events/', events_page),
     path('drinks/', drinks_page),
     path('add_user/', add_user_page),
+    path('events/<int:event_id>/', one_event, name = 'one_event'),
+
 ]

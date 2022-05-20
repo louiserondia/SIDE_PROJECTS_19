@@ -130,7 +130,7 @@ a:active { text-decoration: none; color: black; }
 }
 
 .white_cube {
-	margin: 440px;
+	margin: 350px;
 }
 
 .link_event {
@@ -139,6 +139,8 @@ a:active { text-decoration: none; color: black; }
 }
 
 #event_page p {
+	margin-top: 30px;
+	font-size: larger;
 	position: sticky;
 	display: flex;
 	justify-content: center;

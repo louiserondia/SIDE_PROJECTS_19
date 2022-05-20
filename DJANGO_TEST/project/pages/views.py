@@ -25,6 +25,14 @@ def events_page(request, *args, **kwargs):
 	}
 	return render(request, "events.html", context)
 
+def	one_event(request, event_id, *args, **kwargs):
+	one_event = Event.objects.get(id=event_id)
+	context = {
+		'scans': Scan.objects.all(),
+		'one_events' : one_event,
+	}
+	return render(request, "one_event.html", context)
+
 def drinks_page(request, *args, **kwargs):
 	context = {
 		'scans': Scan.objects.all()

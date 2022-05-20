@@ -7,6 +7,7 @@ class Event(models.Model):
 	date = models.DateTimeField(default=timezone.now)
 	drinks = models.CharField(max_length = 2)
 	name = models.CharField(max_length = 100)
+	duration = models.IntegerField()
 
 class Participant(models.Model):
 	participant = models.CharField(max_length = 100)
