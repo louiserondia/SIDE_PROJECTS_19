@@ -45,7 +45,7 @@ def scan_page(request, *args, **kwargs):
 		d = json.loads(res)
 		scan = Scan(uid = d['id'])
 		scan.save()
-		
+
 	context = {
 		'scans': Scan.objects.all()
 	}

@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>DRINKS</h1>
-{% include 'scan.html' %}
-<p><a href="../add_user/">ADD USER</a></p>
+<div id="drink_page">
+	<h1 id="drink_title">DRINKS</h1>
+		{% include 'scan.html' %}
+	<div class="blue_cube">.</div>
+		<p><a class="link_drink" href="../add_user/">ADD USER</a></p>
+</div>
 {% endblock %}

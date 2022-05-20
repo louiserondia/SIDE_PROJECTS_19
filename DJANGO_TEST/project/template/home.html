@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h1>HOME PAGE</h1>
-<h2><a href="events/">EVENTS</a></h2>
-<h2><a href="drinks/">DRINKS</a></h2>
-<h2><a href="add_user/">USER INFOS</a></h2>
-	{% include 'scan.html' %}
+<div id="home_event">
+	<a id="events" href="events/">EVENTS</a>	
+</div>
+<div id="home_user">
+	<a :link id="add_user" href="add_user/">USER INFOS</a>	
+</div>
+<!-- <h2><a :link href="drinks/">DRINKS</a></h2>
+	{% include 'scan.html' %} -->
 {% endblock %}

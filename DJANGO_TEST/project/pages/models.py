@@ -3,7 +3,7 @@ from django.utils import timezone
 
 # Create your models here.
 
-class Event(models.Model):
+class Event(models.Model):	
 	date = models.DateTimeField(default=timezone.now)
 	drinks = models.CharField(max_length = 2)
 	name = models.CharField(max_length = 100)
