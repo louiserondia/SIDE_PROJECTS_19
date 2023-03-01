@@ -1,0 +1,38 @@
+a:link { text-decoration: none; color: black; }
+a:visited { text-decoration: none; color: black; }
+a:hover { text-decoration: none; color: black; }
+a:active { text-decoration: none; color: black; }
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+    font-family: 'SoMeFlOwErS';
+    src: url('./fonts/SoMeFlOwErS.woff2') format('woff2'),
+        url('./fonts/SoMeFlOwErS.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Blazed';
+    src: url('./fonts/Blazed.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Raleway-Medium';
+    src: url('./fonts/Raleway-Medium.woff') format('woff'),
+    	url('./fonts/Raleway-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Raleway-Regular';
+    src: url('./fonts/Raleway-Regular.woff') format('woff'),
+    	url('./fonts/Raleway-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Retrolight';
+    src: url('./fonts/Retrolight.woff') format('woff'),
+    	url('./fonts/Retrolight.woff2') format('woff2');
+}

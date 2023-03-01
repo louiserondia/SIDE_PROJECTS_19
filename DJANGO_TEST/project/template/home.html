@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="home_event">
+	<a id="events" href="events/">EVENTS</a>	
+	<p>{{ current_event }}</p>
+</div>
+<div id="home_user">
+	<a :link id="add_user" href="add_user/">USER INFOS</a>	
+</div>
+<!-- <h2><a :link href="drinks/">DRINKS</a></h2>
+	{% include 'scan.html' %} -->
+{% endblock %}
